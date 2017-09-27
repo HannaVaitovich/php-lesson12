@@ -57,9 +57,9 @@ table tr th {
 <h1>Библиотека успешного человека</h1>
 
 <form method="POST" action="./index.php">
-        <input type="text" name="isbn" placeholder="ISBN" value="">
-        <input type="text" name="name" placeholder="Название книги" value="">
-        <input type="text" name="author" placeholder="Автор книги" value="">
+        <input type="text" name="isbn" placeholder="ISBN" value="<?php if(!empty($_POST)){ echo htmlspecialchars($search_isbn); } ?>">
+        <input type="text" name="name" placeholder="Название книги" value="<?php if(!empty($_POST)){ echo htmlspecialchars($search_name); } ?>">
+        <input type="text" name="author" placeholder="Автор книги" value="<?php if(!empty($_POST)){ echo htmlspecialchars($search_author); } ?>">
         <input type="submit" value="Поиск">
     </form>
 
